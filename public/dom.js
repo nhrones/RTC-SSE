@@ -1,4 +1,4 @@
-import { myID, callee, signaller } from './main.js';
+import { myID, callee, signaler } from './main.js';
 export let submitButton;
 export let chatForm;
 export let chatInput;
@@ -27,7 +27,7 @@ export const initUI = () => {
         hide(submitButton);
         updateUI(myID, chatInput.value || '', callee.name, callee.emoji);
         chatInput.value = '';
-        signaller.postMessage(data);
+        signaler.postMessage(data);
     };
 };
 export function updateUI(fromID, content, who, emoji, clearFirst = false) {
