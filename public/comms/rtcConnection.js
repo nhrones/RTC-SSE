@@ -80,6 +80,8 @@ export class RtcConnection {
         this.dataChannel.onclose = () => {
             this.checkDataChannelState();
         };
+        // We're now messaging on the DataChannel ... no more signaling. 
+        // no need to do anything except show user messages
         this.dataChannel.onmessage = (event) => {
             const data = JSON.parse(event.data);
             console.info('dataChannel.onmessage: ', data);

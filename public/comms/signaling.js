@@ -97,6 +97,36 @@ export class SignalService {
             }
         };
     }
+    // /** 
+    //  * Dispatches a message event to all registered listeners with optional data     
+    //  * Called from both `socket.onmessage` and from WebRTC.`dataChannel.onmessage`. 	  
+    //  * @example dispatch( message.ResetTurn, {currentPeerIndex: 1} )    
+    //  * @param(string) topic - the topic of interest
+    //  * @param(string | object) - data - optional data to report to subscribers
+    //  */
+    // dispatch(topic: message, data: string | string[] | object) {
+    //     if (this.subscriptions.has(topic)) {
+    //         const subs = this.subscriptions.get(topic)!
+    //         if (subs) {
+    //             for (const callback of subs) {
+    //                 callback(data != undefined ? data : {})
+    //             }
+    //         }
+    //     }
+    // }
+    //     /**
+    //  *  registers a callback function to be executed when a topic-message is recieved
+    //  *	@example onSignalRecieved(message.ResetTurn, this.resetTurn)
+    //  *	@param(string) topic - the topic of interest
+    //  *	@param(function) listener - a callback function
+    //  */
+    //     onSignalRecieved(topic: number, listener: Function) {
+    //         if (!this.subscriptions.has(topic)) {
+    //             this.subscriptions.set(topic, [])
+    //         }
+    //         const callbacks = this.subscriptions.get(topic)!
+    //         callbacks.push(listener)
+    //     }
     /**
      * By default, if the connection between the client and server closes,
      * the connection is `restarted`.
