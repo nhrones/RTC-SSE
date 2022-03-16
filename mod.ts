@@ -2,7 +2,7 @@
 //                        Main Module                           \\ 
 ///////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-import { serve } from "https://deno.land/std@0.128.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.129.0/http/server.ts";
 import { host, port } from './constants.ts'
 import { contentType } from './path.ts'
 import { GET } from './get.ts'
